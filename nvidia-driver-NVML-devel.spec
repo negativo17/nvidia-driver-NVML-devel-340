@@ -11,6 +11,10 @@ URL:            https://developer.nvidia.com/nvidia-management-library-nvml
 Source0:        http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_340_29_gdk_linux_32.run
 Source1:        http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_340_29_gdk_linux_64.run
 
+%if 0%{?fedora} >= 24
+Buildrequires:  perl-Getopt-Long
+%endif
+
 Requires:       nvidia-driver-NVML%{_isa}
 Obsoletes:      gpu-deployment-kit%{_isa} < %{?epoch}:%{version}-%{release}
 Provides:       gpu-deployment-kit%{_isa} = %{?epoch}:%{version}-%{release}
