@@ -8,8 +8,8 @@ Summary:        NVIDIA Management Library (NVML) development files
 Epoch:          1
 License:        NVIDIA License
 URL:            https://developer.nvidia.com/nvidia-management-library-nvml
-Source0:        http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_340_21_gdk_linux_32.run
-Source1:        http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_340_21_gdk_linux_64.run
+Source0:        http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_340_29_gdk_linux_32.run
+Source1:        http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_340_29_gdk_linux_64.run
 
 Requires:       nvidia-driver-NVML%{_isa}
 Obsoletes:      gpu-deployment-kit%{_isa} < %{?epoch}:%{version}-%{release}
@@ -68,6 +68,9 @@ for man in %{buildroot}%{_mandir}/man3/* %{buildroot}%{_mandir}/man8/*; do gzip 
 %{_mandir}/man8/nvidia-healthmon.*
 
 %changelog
+* Thu Jun 23 2016 Simone Caronni <negativo17@gmail.com> - 1:340.29-1
+- Update to 340.29.
+
 * Wed Sep 24 2014 Simone Caronni <negativo17@gmail.com> - 1:340.29-1
 - Update to 340.29.
 
